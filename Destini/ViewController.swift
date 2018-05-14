@@ -8,6 +8,8 @@
 
 import UIKit
 
+var storyIndex : Int = 1
+
 class ViewController: UIViewController {
 
     // Our strings
@@ -42,7 +44,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        storyTextView.text = (story1)
+        topButton.setTitle(answer1a, for: .normal)
+        bottomButton.setTitle(answer1b, for: .normal)
         // TODO Step 3: Set the text for the storyTextView, topButton, bottomButton, and to T1_Story, T1_Ans1, and T1_Ans2
         
     }
@@ -50,6 +54,21 @@ class ViewController: UIViewController {
     
     // User presses one of the buttons
     @IBAction func buttonPressed(_ sender: UIButton) {
+    
+        
+        //State 1 to state 2 or state 3
+        if sender.tag == 1 {
+            storyTextView.text = (story2)
+            //topButton
+            //bottomButton
+        } else {
+            storyTextView.text = (story3)
+            //topButton
+            //bottomButton
+        }
+        
+        
+        
     
         // TODO Step 4: Write an IF-Statement to update the views
                 
